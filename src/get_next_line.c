@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   get_next_line_bonus.c                              :+:    :+:            */
+/*   get_next_line.c                                    :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: pniezen <pniezen@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/11/19 15:58:09 by pniezen       #+#    #+#                 */
-/*   Updated: 2021/12/07 16:48:32 by pniezen       ########   odam.nl         */
+/*   Updated: 2022/04/12 11:59:49 by pniezen       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line_bonus.h"
+#include "get_next_line.h"
 
 static void	set_zero(char *buffer)
 {
@@ -31,7 +31,7 @@ static char	*get_one_line(char *src)
 
 	if (!src)
 		return (free_null(src));
-	tmp = ft_calloc(ft_strlen(src) + 1, sizeof(char));
+	tmp = ft_calloc(get_ft_strlen(src) + 1, sizeof(char));
 	if (!tmp)
 	{
 		free(src);

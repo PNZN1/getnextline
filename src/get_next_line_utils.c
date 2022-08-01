@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   get_next_line_utils_bonus.c                        :+:    :+:            */
+/*   get_next_line_utils.c                              :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: pniezen <pniezen@student.codam.nl>           +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/11/20 11:21:18 by pniezen       #+#    #+#                 */
-/*   Updated: 2021/12/07 16:48:59 by pniezen       ########   odam.nl         */
+/*   Updated: 2022/07/29 09:46:10 by pniezen       ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line_bonus.h"
+#include "get_next_line.h"
 
 char	*free_null(char *str)
 {
@@ -61,7 +61,8 @@ char	*realloc_and_join(char *dst, char *src)
 
 	i = 0;
 	j = 0;
-	tmp = ft_calloc((ft_strlen(dst) + ft_strlen(src)) + 1, sizeof(char));
+	tmp = ft_calloc((get_ft_strlen(dst) + get_ft_strlen(src))
+			+ 1, sizeof(char));
 	if (!tmp)
 		return (free_null(dst));
 	while (dst[i])
@@ -79,7 +80,7 @@ char	*realloc_and_join(char *dst, char *src)
 	return (tmp);
 }
 
-size_t	ft_strlen(const char *s)
+size_t	get_ft_strlen(const char *s)
 {
 	size_t	i;
 
